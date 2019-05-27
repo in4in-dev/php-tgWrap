@@ -10,6 +10,7 @@ abstract class AbstractBot extends Client
 	public $bot;
 	public $user;
 	public $chat;
+	protected $db;
 	protected $callback = null;
 	protected $text = null;
 
@@ -43,10 +44,12 @@ abstract class AbstractBot extends Client
 		}
 
 		//Get User
-		$user = $this->getDb()->getUser($this->chat);
+		$this->db = $this->getDb();
+
+		$user = $this->db->getUser($this->chat);
 		if(!$user){
-			$this->getDb()->addUser($this->chat);
-			$user = $this->getDb()->getUser($this->chat);
+			$this->db->addUser($this->chat);
+			$user = $this->db->getUser($this->chat);
 		}
 
 		$this->user = $user;
