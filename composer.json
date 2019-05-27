@@ -1,0 +1,14 @@
+{
+    "name": "tg/bot",
+    "type": "library",
+    "require-dev": {
+        "telegram-bot/api": "^2.3"
+    },
+    "authors": [
+        {
+            "name": "Инч",
+            "email": "in4in.q@gmail.com"
+        }
+    ],
+    "require": {}
+}
