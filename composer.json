@@ -1,5 +1,5 @@
 {
-    "name": "tg/bot",
+    "name": "tg-wrap/bot",
     "type": "library",
     "require-dev": {
         "telegram-bot/api": "^2.3"
